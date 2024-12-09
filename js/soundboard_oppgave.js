@@ -1,46 +1,37 @@
+import {sounds} from '/data/soundsJS.js';
+
+console.log(sounds);
 
 
-//*1. Create an external JSON or js file containing information about the sounds you want to use. Import the file in here:  */
-// import referanceWord from "the location of the file" 
-// Remember: 
-    // to use type="module" for this js file when using imports
-    // to use assert {type: "json"} if using a json file
-// examples of how the structure can look is in the data folder
+document.getElementById('drumkit');
+
+console.log(drumkit);
+
+sounds.map((sound) => {
+    /*lager knapp*/
+    const btn = document.createElement('Button');
+    drumkit.appendChild(btn);
+    console.log(btn);
+    /*setter sound.key til text content på knapp, henter fra soundsJS */
+    btn.textContent = sound.key;
+    const audio = document.createElement('audio');
+    audio.src = sound.file;
+    console.log(sound.file);
+    btn.addEventListener('click', () => {
+        audio.play();
+    });
+    btn.addEventListener('keydown', (e) => {
+        if (e.key === sound.key) {
+            audio.play();
+        }
+    })
+
+console.log(sounds.map((sound) => sound.file));
+
+})
 
 
-//* ////////////////////////////////////// */
 
-//*1.1. Catch the html element with id drumkit: */
-
-
-//* ////////////////////////////////////// */
-
-//*1.3. Write a console log for the fetched sounds so you know how the structure is and how you can use it */
-
-
-//* ////////////////////////////////////// */
-
-
-//*2. Create the function with a parameter that is refering to the sound used that does the following: */
-
-//2.1. make a variable that creates a button element with .createElement
-
-    // add textContent to the created buttonElement. Textcontent should be either the file name and/or key needed to be pressed
-
-//2.2. make a variables that create an audio element with .createElement 
-    //the audio element that is created should have the src equal to the file source
-    //the audio element that is created should have the id equal to the textcontent created in 2.1.
-
-//2.3. add an eventlistner to the whole page that: 
-    //actives when pressing a keyboard key (first parameter of the eventlistener)
-    //runs a nameless function with parameter event (refering to the key pressed)
-
-    // 2.3.1. inside of the eventlistner:
-
-        // create a variable that refers to the key pressed 
-        // make a conditional logic that asks if the variable created just above is the same as the sound key that should be pressed (the key "key" in the js or JSON data you created)
-            // if the conditional is true, play the audio element that you created in 2.2.
-        
 //2.4. OPTIONAL. If you used keydown as the first parameter in the previous eventlistener, add another eventlistner to the whole page that: 
     //actives when releasing a keyboard key (first parameter of the eventlistener)
 

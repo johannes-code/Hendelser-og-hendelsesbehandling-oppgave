@@ -1,0 +1,13 @@
+{
+  "soundFiles": [
+    { "file": "sounds/chicken1.mp3", "key": "F" },
+    { "file": "sounds/cow-moo.mp3", "key": "D" },
+    { "file": "sounds/deepbark.mp3", "key": "S" },
+    { "file": "sounds/donkey_kong_counntry_die_sound_effect.mp3", "key": "W" },
+    { "file": "sounds/george_micael_wham_careless_whisper-1.mp3 " , "key":"Q"},
+    { "file": "sounds/kenny-dies.mp3 " , "key":"Z"},
+    { "file": "sounds/meow-1.mp3 " , "key":"X"},
+    { "file": "sounds/pokemon-theme-song-original2.mp3 " , "key":"P"},
+    { "file": "sounds/tom-and-jerry-the-best-scream.mp3 " , "key":"M"}
+  ]
+}

@@ -1,0 +1,46 @@
+// Anta at vi har en array med lydobjekter, for eksempel:
+const sounds = [
+  { key: 'A', fileName: 'clap.wav', soundName: 'Clap' },
+  { key: 'S', fileName: 'hihat.wav', soundName: 'Hi-Hat' },
+  // ... flere lyder ...
+];
+
+function createSoundButton(sound) {
+  // 2.1. Opprett knapp-element
+  const buttonElement = document.createElement('button');
+  buttonElement.textContent = `${sound.soundName} (${sound.key})`;
+
+  // 2.2. Opprett lyd-element
+  const audioElement = document.createElement('audio');
+  audioElement.src = `lyder/${sound.fileName}`; // Anta at lydfilene er i en 'lyder' mappe
+  audioElement.id = sound.key;
+
+  // Legg til knappen i container
+  document.getElementById('boardContainer').appendChild(buttonElement);
+  
+  // Legg til lyd-elementet i dokumentet
+  document.body.appendChild(audioElement);
+
+  // Legg til klikk-hendelse på knappen
+  buttonElement.addEventListener('click', () => {
+    audioElement.play();
+  });
+}
+
+// 2.3. Legg til tastaturtrykkshendelse
+document.addEventListener('keydown', (event) => {
+  // 2.3.1. Sjekk om tasten som ble trykket matcher noen av lydene
+  const pressedKey = event.key.toUpperCase();
+  const sound = sounds.find(s => s.key === pressedKey);
+  
+  if (sound) {
+    const audio = document.getElementById(sound.key);
+    if (audio) {
+      audio.currentTime = 0; // Tilbakestill lyden hvis den allerede spiller
+      audio.play();
+    }
+  }
+});
+
+// Opprett knapper for alle lyder
+sounds.forEach(createSoundButton);
