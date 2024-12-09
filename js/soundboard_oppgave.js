@@ -20,16 +20,15 @@ sounds.map((sound) => {
     btn.addEventListener('click', () => {
         audio.play();
     });
-    btn.addEventListener('keydown', (e) => {
+    document.addEventListener('keypress', (e) => {
         if (e.key === sound.key) {
             audio.play();
+            console.log(`Key ${sound.key} was pressed`)
+            
         }
     })
-
-console.log(sounds.map((sound) => sound.file));
-
+    
 })
-
 
 
 //2.4. OPTIONAL. If you used keydown as the first parameter in the previous eventlistener, add another eventlistner to the whole page that: 
