@@ -3,27 +3,42 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: black;
+  display: flex;
+  width: fit-content;
+  padding: 10px;
+}
+
 #drumkit {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   padding: 18px;
-  border: double green;
 }
 
 button {
   display: flex;
+  width: 42px;
+  height: 36px;
 
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 32px;
-  border-radius: 18px;
+  font-size: 18px;
+  border-radius: 8px;
   border-color: blueviolet;
   background-color: darkcyan;
-  box-shadow: 5px 2px 0 2px springgreen;
+  box-shadow: 0px 2px 0 2px springgreen;
+  padding: 5px;
 }
 
 button:hover {
   background-color: blue;
   box-shadow: 10px 10px 10px 10px purple;
+}
+
+img {
+  display: flex;
+  border-radius: 92px;
+  width: 940px;
+  border: solid double red;
 }

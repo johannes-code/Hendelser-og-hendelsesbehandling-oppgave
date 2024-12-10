@@ -44,4 +44,15 @@ sounds.map((sound) => {
     }});
 }
 
+function pictureBox() {
+    const newElement = document.createElement('img');
+    const img = 'https://mythicalcreatures.info/media/troll-norsk-creature-1-768x439.jpg';
+    newElement.src = img;
+    document.body.appendChild(newElement);
+}
+
+
+
+
 soundBoard();
+pictureBox();
