@@ -47,8 +47,8 @@ sounds.map((sound) => {
 
 function pictureBox() {
     const newElement = document.createElement('img');
-    const img = 'https://mythicalcreatures.info/media/troll-norsk-creature-1-768x439.jpg';
-    newElement.src = img;
+    const imgSrc = 'https://mythicalcreatures.info/media/troll-norsk-creature-1-768x439.jpg';
+    newElement.src = imgSrc;
     document.body.appendChild(newElement);
 }
 
