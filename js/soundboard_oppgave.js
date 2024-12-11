@@ -1,5 +1,5 @@
 import {sounds} from './data/soundsJS.js';
-
+console.log("soundboard_oppgave kjøres");
 document.getElementById('drumkit');
 
 let currentAudio = null;
