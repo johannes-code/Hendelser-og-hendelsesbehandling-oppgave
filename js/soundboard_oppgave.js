@@ -1,9 +1,6 @@
 import {sounds} from '../data/soundsJS.js';
-<<<<<<< HEAD
 
-=======
 
->>>>>>> 12681cc6c4eeb5198ae3113f5c45d6679873f984
 document.getElementById('drumkit');
 
 let currentAudio = null;
