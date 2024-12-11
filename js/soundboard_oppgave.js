@@ -1,4 +1,4 @@
-import {sounds} from './data/soundsJS.js';
+import {sounds} from '../data/soundsJS.js';
 
 document.getElementById('drumkit');
 
